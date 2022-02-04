@@ -21,8 +21,8 @@ class MyHomePage extends StatelessWidget {
                     "Snack Bar",
                     "This is a message",
                     snackPosition: SnackPosition.BOTTOM,
-                    borderRadius: 0,
-                    margin: EdgeInsets.all(0),
+                    borderRadius: 10,
+                    margin: EdgeInsets.all(10),
                     backgroundColor: Colors.cyan,
                     padding: const EdgeInsets.all(30),
                     icon: const Icon(
@@ -32,6 +32,7 @@ class MyHomePage extends StatelessWidget {
                     mainButton: TextButton(
                       style: TextButton.styleFrom(
                         backgroundColor: Colors.red,
+                        elevation: 10,
                         padding: const EdgeInsets.all(10.0),
                         primary: Colors.white,
                         textStyle: const TextStyle(fontSize: 15),
