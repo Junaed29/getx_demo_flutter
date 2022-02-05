@@ -15,6 +15,7 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            //Snack bar
             ElevatedButton(
                 onPressed: () {
                   Get.snackbar(
@@ -42,7 +43,30 @@ class MyHomePage extends StatelessWidget {
                     ),
                   );
                 },
-                child: const Text("Show Snack bar"))
+                child: const Text("Show Snack bar")),
+            //Dialogue
+            ElevatedButton(
+                onPressed: () {
+                  Get.defaultDialog(
+                    title: "Exit",
+                    middleText: "Do you want to exit?",
+                    content: Text("Sure to Exit?"),
+                    textConfirm: "Yes",
+                    onConfirm: () {
+                      Get.back();
+                    },
+                    textCancel: "No",
+                    onCancel: () {
+                      Get.back();
+                    },
+                    confirmTextColor: Colors.white,
+                    backgroundColor: Colors.white,
+                    barrierDismissible: false,
+                  );
+                },
+                child: const Text("Show Dialogue")),
+            ElevatedButton(
+                onPressed: () {}, child: const Text("Show Dialogue")),
           ],
         ),
       ),
