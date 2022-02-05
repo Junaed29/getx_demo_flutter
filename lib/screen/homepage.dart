@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo_flutter/widgets/textfield_with_button.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -66,7 +67,12 @@ class MyHomePage extends StatelessWidget {
                 },
                 child: const Text("Show Dialogue")),
             ElevatedButton(
-                onPressed: () {}, child: const Text("Show Dialogue")),
+                onPressed: () {
+                  Get.bottomSheet(
+                    TextFieldWithButton(),
+                  );
+                },
+                child: const Text("Show BottomSheet")),
           ],
         ),
       ),
