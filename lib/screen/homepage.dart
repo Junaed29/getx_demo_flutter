@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo_flutter/screen/profile_page.dart';
 import 'package:getx_demo_flutter/widgets/textfield_with_button.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -66,6 +67,7 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: const Text("Show Dialogue")),
+            //bottomSheet
             ElevatedButton(
                 onPressed: () {
                   Get.bottomSheet(
@@ -73,6 +75,13 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: const Text("Show BottomSheet")),
+            //Navigate to another page
+            ElevatedButton(
+              onPressed: () {
+                Get.to(ProfilePage());
+              },
+              child: const Text("Go to Profile Page"),
+            ),
           ],
         ),
       ),
