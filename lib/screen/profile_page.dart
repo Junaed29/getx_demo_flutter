@@ -5,6 +5,10 @@ import 'package:getx_demo_flutter/screen/cart_page.dart';
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
+  Widget getArguments() => Get.arguments != null
+      ? Text("${Get.arguments}")
+      : Text("${Get.arguments}");
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,11 +20,20 @@ class ProfilePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Get.arguments != null
+                ? Text("${Get.arguments}")
+                : const Text("No Data"),
             ElevatedButton(
               onPressed: () {
                 Get.back();
               },
               child: const Text("Back to Main Page"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Get.back(result: "From Profile");
+              },
+              child: const Text("Back to Main Page with results"),
             ),
             ElevatedButton(
               onPressed: () {

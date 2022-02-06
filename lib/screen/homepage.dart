@@ -82,6 +82,23 @@ class MyHomePage extends StatelessWidget {
               },
               child: const Text("Go to Profile Page"),
             ),
+            ElevatedButton(
+              onPressed: () {
+                Get.to(ProfilePage(), arguments: "From home");
+              },
+              child: const Text("Go to Profile With arguments"),
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                var result =
+                    await Get.to(ProfilePage(), arguments: "From home");
+                if (result != null)
+                  Get.snackbar("Result", result,
+                      snackPosition: SnackPosition.BOTTOM);
+              },
+              child: const Text(
+                  "Go to Profile With arguments and Get with Result"),
+            ),
           ],
         ),
       ),
